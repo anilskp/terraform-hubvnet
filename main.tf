@@ -3,7 +3,7 @@ provider azurerm {
     subscription_id = "11a0fcee-66ee-4603-b871-79d050820de1"
 }
 
-resource "azurerm_resource_group" "resource_nvet_gp"{
+resource "azurerm_resource_group" "resource2_vnet_gp"{
 
 name = "qrvnet-rg"
 location = "westeurope"
@@ -15,8 +15,8 @@ tags = {
 
 resource "azurerm_virtual_network" "test" {
   name                = "qrhub-vnet"
-  location            = "${azurerm_resource_group.resource_nvet_gp.location}"
-  resource_group_name = "${azurerm_resource_group.resource_nvet_gp.name}"
+  location            = "${azurerm_resource_group.resource2_vnet_gp.location}"
+  resource_group_name = "${azurerm_resource_group.resource2_vnet_gp.name}"
   address_space       = ["10.0.0.0/16"]
 
   
