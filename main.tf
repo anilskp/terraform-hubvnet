@@ -28,7 +28,7 @@ resource "azurerm_virtual_network" "test" {
 
   subnet {
     name           = "GatewaySubnet"
-    address_prefix = "10.0.3.0/24"
+    address_prefix = "10.0.2.0/24"
   }
 
 
